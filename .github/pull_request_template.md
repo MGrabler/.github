@@ -37,6 +37,12 @@ Please also list any relevant details for your test configuration
 * Toolchain:
 * SDK:
 
+## Reviews
+
+Please identify two developers to review this change
+
+- [ ] @personA
+- [ ] @personB
 
 ## Checklist:
 
