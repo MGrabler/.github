@@ -26,4 +26,4 @@ assignees: MGrabler
 
 ## **References**
 <!-- Add references to other projects or Issues here. -->
-- [GitHub](https://github.com)
+- [GitHub](https://github.com "Die einfachste art für Versionskontrolle.")
