@@ -1,30 +1,46 @@
-# Pull Request Template
+---
+name: Pull Request
+about: Track things that we're doing cause we're doing too many things!
+title: "[Pull-Request]: "
+labels: triage
+assignees: MGrabler
 
+---
 ## Description
 
 Following this checklist to help us incorporate your
 contribution quickly and easily:
 
  - Each **commit** in the pull request should have a **meaningful subject line**.
- - Please **include a summary** of the change and which issue is fixed.
- - Please also include relevant **motivation and context**.
+ - Please **include a summary** of the change and which issue is fixed. 
+ - Please also include relevant **motivation and context**. 
  - List any **dependencies** that are **required** for this change.
 
-Fixes: #(issue)
-
-## Type of change
-
-Please delete options that are not relevant.
-
-- [ ] **Bug fix** (non-breaking change which fixes an issue)
-- [ ] **New feature** (non-breaking change which adds functionality)
-- [ ] **Breaking change** (fix or feature that would cause existing functionality to not work as expected)
+---
+## Fixes Issue
+<!-- Please enter affected issues here. -->
 - [ ] This change requires a **documentation update**
 
-## How Has This Been Tested?
+### **Bug fix** 
+<!-- non-breaking change which fixes an issue  -->
 
-Please describe the tests that you ran to verify your changes.
-Provide instructions so we can reproduce.
+- [ ]  #(issue)
+
+### **New feature** 
+<!-- non-breaking change which adds functionality  -->
+
+- [ ]  #(issue)
+
+### **Breaking change** 
+<!-- fix or feature that would cause existing functionality to not work as expected  -->
+
+- [ ]  #(issue)
+
+---
+## **How Has This Been Tested?**
+
+Please describe the tests that you ran to verify your changes. 
+Provide instructions so we can reproduce. 
 Please also list any relevant details for your test configuration
 
 - [ ] Test A
@@ -37,14 +53,8 @@ Please also list any relevant details for your test configuration
 * Toolchain:
 * SDK:
 
-## Reviews
 
-Please identify two developers to review this change
-
-- [ ] @personA
-- [ ] @personB
-
-## Checklist:
+## **Checklist**
 
 - [ ] My code follows the **style guidelines** of this project
 - [ ] I have performed a **self-review** of my own code

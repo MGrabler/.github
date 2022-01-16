@@ -1,0 +1,6 @@
+Templates ineinander verschachteln
+
+Name --> Java MVC | Extension --> java
+1. File name --> domain/${NAME}
+2. File name --> controller/${NAME}Controller
+4. File name --> view/${NAME}View

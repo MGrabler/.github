@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Maven Selbst https://search.maven.org/ -->
+    <!-- Infos zu Maven https://maven.apache.org/plugins/index.html -->
+    <!-- Versionen Repositorys https://mvnrepository.com/ -->
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>at.spengergasse</groupId>
+    <artifactId>YourDalyMeal</artifactId>
+    <!-- 1. Mayor Release (Architektur Änderung -> Immigrieren) 2. Minor Release (Funktionale Erweiterung -> Doc Nachlesen) -->
+    <!-- 3. Patch-Level (Bugs) 4. Build-Number (Job Number) Semantic Version, Continuous Integration (Commit mit Pipeline) SI-Server) -->
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>YourDalyMeal</name>
+    <description>YourDalyMeal</description>
+    <!-- FIXME change it to the project's website -->
+    <url>${github.project.url}</url>
+    <inceptionYear>2022</inceptionYear>
+
+    <organization>
+        <name>Spengergasse</name>
+        <url>https://www.spengergasse.at/</url>
+    </organization>
+
+    <properties>
+        <!-- custom properties -->
+        <requireMaven.version>3.6.2</requireMaven.version> <!-- 3.8.4  -->
+        <java.version>17</java.version>
+        <github.project.url>https://github.com/MGrabler/${project.name}</github.project.url>
+
+        <!-- predefined build properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- compiler versions -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+        <!-- javadoc versions -->
+        <maven.javadoc.source>${java.version}</maven.javadoc.source>
+        <maven.javadoc.target>${java.version}</maven.javadoc.target>
+        <maven.javadoc.release>${java.version}</maven.javadoc.release>
+
+        <!-- plugins versions -->
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+        <!-- test dependency versions -->
+        <junit-jupiter.version>5.8.2</junit-jupiter.version>
+        <assertj-core.version>3.22.0</assertj-core.version>
+
+    </properties>
+
+    <developers>
+        <developer>
+            <id>001</id>
+            <name>Grabler Michael</name>
+            <email>gab19925@spengergasse.at</email>
+            <organization>Spengergasse</organization>
+            <organizationUrl>https://www.spengergasse.at/</organizationUrl>
+            <roles>
+                <role>Projektleiter</role>
+                <role>Software Entwickler</role>
+            </roles>
+            <timezone>UTC +1</timezone>
+        </developer>
+    </developers>
+
+    <contributors>
+        <!-- Projektteilnehmer jene, die nicht Commiten -->
+        <contributor>
+            <name>Jennifer Mlak</name>
+            <email>JMlak@testmail.at</email>
+            <organization>Test AG</organization>
+            <organizationUrl>https://www.Test.at/</organizationUrl>
+            <roles>
+                <role>Marketing</role>
+            </roles>
+            <timezone>UTC +1</timezone>
+        </contributor>
+    </contributors>
+
+    <scm>
+        <tag>HEAD</tag>
+        <url>${github.project.url}</url>
+        <connection>scm:git:https://github.com/MGrabler/${project.name}</connection>
+        <developerConnection>scm:git:https://git@github.com/MGrabler/${project.name}</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>${github.project.url}/issues</url>
+    </issueManagement>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.1.2</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <dependencies>
+        <!-- Bibliotheken für das Projekt (Abhängigkeiten) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- Tätlichkeiten die Maven für mich immer macht -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <arguments>-Dmaven.javadoc.skip=true</arguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-versions</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <message>Es wird die aktuelle Version von Maven benötigt (${requireMaven.version}).</message>
+                                    <version>${requireMaven.version}</version>
+                                </requireMavenVersion>
+                                <banDuplicatePomDependencyVersions/>
+                                <requireJavaVersion>
+                                    <message>Es wird die aktuelle Version von Java benötigt (${java.version}).</message>
+                                    <version>${java.version}</version>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <groups>
+                        <group>
+                            <title>TI</title>
+                            <packages>*</packages>
+                        </group>
+                    </groups>
+                    <tags>
+                        <tag>
+                            <name>todo</name>
+                            <!-- todo tag for all places -->
+                            <placement>a</placement>
+                            <head>To do something:</head>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>add-resource</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>add-resource</goal>
+                        </goals>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/main/db</directory>
+                                    <targetPath>META-INF/db</targetPath>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <!-- src resources -->
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/db</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>

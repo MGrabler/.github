@@ -1,0 +1,7 @@
+Templates ineinander verschachteln
+
+Name --> Java DDD | Extension --> java
+1. File name --> domain/${NAME}
+2. File name --> presentation/${NAME}RestController
+3. File name --> persistence/${NAME}Repository
+4. File name --> service/${NAME}Service

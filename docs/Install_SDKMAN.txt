@@ -1,0 +1,12 @@
+Benötigt zip.exe keine verknüpfung sondern kopieren in C:\ProgramData\Programmieren\Git\mingw64\bin
+
+Install:
+export SDKMAN_DIR="C:\ProgramData\Programmieren\sdkman" && curl -s "https://get.sdkman.io" | bash
+Einbinden:
+source "C:\ProgramData\Programmieren\sdkman/bin/sdkman-init.sh"
+
+Installieren danach bei C:\ProgramData\Programmieren\Git\etc\bash.bashrc angeben
+
+.bashrc:
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "C:\Program Files\Programmieren\sdkman/bin/sdkman-init.sh" ]] && source "C:\Program Files\Programmieren\sdkman/bin/sdkman-init.sh"

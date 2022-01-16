@@ -1,0 +1,14 @@
+Commit Template aktivieren
+git config --global commit.template "C:\ProgramData\Programmieren\git_templet.txt"
+
+Windows --> git config --global core.autocrlf true
+Linux 	--> git config --global core.autocrlf input
+WindowsProjekt --> git config --global core.autocrlf false
+
+Config dateien
+System --> C:\ProgramData\Programmieren\Git\etc     	 --> gitconfig
+Global --> C:\Windows\System32\config\systemprofile 	 --> .gitconfig
+Local  --> C:\Users\..\7BBIF\Mint_Data_Intelligence\.git --> config
+
+alias für notepad
+alias np='start notepad++'

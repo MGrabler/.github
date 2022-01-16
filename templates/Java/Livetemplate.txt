@@ -1,0 +1,22 @@
+Name --> todo
+Beschreibung --> Insert TODO comment with the current date and username
+
+Code
+$COMMENT$ TODO $DATE$ $USER$: $TEXT$ $COMMENTEND$$END$
+
+Name --> fixme
+Beschreibung --> Insert FIXME comment with the current date and username
+
+Code
+$COMMENT$ FIXME $DATE$ $USER$: $TEXT$ $COMMENTEND$$END$
+
+VariablenName --> Funktion --> default --> skip wenn vorhanden
+
+$COMMENT --> commentStart() --> n/a --> ja
+$DATE --> date() --> n/a --> ja
+$USER --> user() --> n/a --> ja
+$TEXT --> n/a --> n/a --> nein
+$COMMENTEND --> commentEnd() --> n/a --> ja
+
+scope
+- alle
